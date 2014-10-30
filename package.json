@@ -1,0 +1,39 @@
+{
+  "name":        "jscs-loader",
+  "description": "Run your source through the JSCS style checker.",
+  "version":     "0.0.1",
+
+  "author": {
+    "name":  "Daniel Perez Alvarez",
+    "email": "unindented@gmail.com",
+    "url":   "http://unindented.org/"
+  },
+
+  "repository": {
+    "type": "git",
+    "url":  "https://github.com/unindented/jscs-loader"
+  },
+
+  "keywords": [
+    "jscs",
+    "webpack"
+  ],
+
+  "scripts": {
+    "test": "./node_modules/.bin/nodeunit test/loader.js"
+  },
+
+  "dependencies": {
+    "loader-utils":        "^0.2.5",
+    "rcloader":            "^0.1.2",
+    "strip-json-comments": "^1.0.2"
+  },
+
+  "peerDependencies": {
+    "jscs": "^1.7.3"
+  },
+
+  "devDependencies": {
+    "nodeunit": "^0.9"
+  }
+}
