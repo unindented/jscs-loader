@@ -11,7 +11,7 @@
 
   "repository": {
     "type": "git",
-    "url":  "git@github.int.yammer.com:dalvarez/jscs-loader.git"
+    "url":  "https://github.com/unindented/jscs-loader"
   },
 
   "keywords": [
