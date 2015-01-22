@@ -89,7 +89,7 @@ var checkSource = function (source, config) {
 
   if (!result.isEmpty()) {
     if (reporter) {
-      reporter([result]);
+      reporter.call(this, [result]);
     }
     else {
       var message = result.getErrorList().map(function (error) {
