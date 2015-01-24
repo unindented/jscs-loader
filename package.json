@@ -30,7 +30,7 @@
   },
 
   "peerDependencies": {
-    "jscs": "^1.7.3"
+    "jscs": "^1.10.0"
   },
 
   "devDependencies": {
