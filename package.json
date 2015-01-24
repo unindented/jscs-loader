@@ -1,7 +1,7 @@
 {
   "name":        "jscs-loader",
   "description": "Run your source through the JSCS style checker.",
-  "version":     "0.0.2",
+  "version":     "0.0.3",
 
   "author": {
     "name":  "Daniel Perez Alvarez",
