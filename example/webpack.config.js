@@ -1,4 +1,5 @@
 var path = require('path');
+var util = require('util');
 
 module.exports = {
   entry: './entry.js',
@@ -19,6 +20,13 @@ module.exports = {
 
   jscs: {
     validateIndentation: 2,
-    reporter: require('jscs/lib/reporters/console')
+    reporter: function (errors) {
+      if (!errors.isEmpty()) {
+        errors.getErrorList().forEach(function (error) {
+          this.emitWarning(util.format('line %d, col %d: %s',
+            error.line, error.column, error.message));
+        }, this);
+      }
+    }
   }
 };

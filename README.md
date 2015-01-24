@@ -57,6 +57,19 @@ If you prefer to use a custom reporter, pass a function under the `reporter` key
 
 The reporter function will be excuted with the loader context as `this`. You may emit messages using `this.emitWarning(...)` or `this.emitError(...)`. See [webpack docs on loader context](http://webpack.github.io/docs/loaders.html#loader-context).
 
+**Note:** JSCS reporters are **not compatible** with `jscs-loader`! This is due to the fact that reporter input is only processed from one file, not multiple files. Error reporting in this manner differs from [traditional reporters](https://github.com/jscs-dev/node-jscs/tree/master/lib/reporters) for JSCS, since the loader plugin (i.e. `jscs-loader`) is executed for each source file, and thus the reporter is executed for each file.
+
+The output in webpack CLI will usually be:
+
+```js
+...
+
+WARNING in ./path/to/file.js
+<reporter output>
+
+...
+```
+
 
 ## Meta
 

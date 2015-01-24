@@ -91,7 +91,7 @@ module.exports.test = {
 
     'can use a reporter': function (test) {
       var reporter = function (res) {
-        test.equal(1, res[0].getErrorCount());
+        test.equal(1, res.getErrorCount());
       };
 
       var context = mock(null, {reporter: reporter});
@@ -181,7 +181,7 @@ module.exports.test = {
       var context;
 
       var reporter = function (res) {
-        test.equal(1, res[0].getErrorCount());
+        test.equal(1, res.getErrorCount());
       };
 
       var callback = function () {
