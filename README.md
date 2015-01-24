@@ -55,6 +55,8 @@ By default the loader will provide a default reporter.
 
 If you prefer to use a custom reporter, pass a function under the `reporter` key in the `jscs` options. See <https://github.com/jscs-dev/node-jscs/tree/master/lib/reporters> to get an idea of how to build your own reporter.
 
+The reporter function will be excuted with the loader context as `this`. You may emit messages using `this.emitWarning(...)` or `this.emitError(...)`. See [webpack docs on loader context](http://webpack.github.io/docs/loaders.html#loader-context).
+
 
 ## Meta
 
