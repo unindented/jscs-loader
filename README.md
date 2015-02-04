@@ -19,7 +19,7 @@ In your `webpack.config.js` file:
 ```js
 module.exports = {
   module: {
-    loaders: [{
+    preLoaders: [{
       test:    /\.js$/,
       exclude: /node_modules/,
       loader: 'jscs-loader'
