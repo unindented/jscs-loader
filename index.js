@@ -1,6 +1,7 @@
 'use strict';
 
 var fs       = require('fs');
+var path     = require('path');
 var strip    = require('strip-json-comments');
 var utils    = require('loader-utils');
 var RcFinder = require('rcfinder');
@@ -20,32 +21,34 @@ var extend = function (obj) {
 };
 
 var rcFinder = new RcFinder('.jscsrc', {
-  loader: function (path) {
-    return path;
+  loader: function (rcpath) {
+    return rcpath;
   }
 });
 
 var loadConfigSync = function () {
-  var path = rcFinder.find(this.resourcePath);
-  if (typeof path !== 'string') {
+  var folder = path.dirname(this.resourcePath);
+  var rcpath = rcFinder.find(folder);
+  if (typeof rcpath !== 'string') {
     // No .jscsrc found.
     return {};
   }
 
-  this.addDependency(path);
-  var file = fs.readFileSync(path, 'utf8');
+  this.addDependency(rcpath);
+  var file = fs.readFileSync(rcpath, 'utf8');
   return JSON.parse(strip(file));
 };
 
 var loadConfigAsync = function (callback) {
-  rcFinder.find(this.resourcePath, function (err, path) {
-    if (typeof path !== 'string') {
+  var folder = path.dirname(this.resourcePath);
+  rcFinder.find(folder, function (err, rcpath) {
+    if (typeof rcpath !== 'string') {
       // No .jscsrc found.
       return callback(null, {});
     }
 
-    this.addDependency(path);
-    fs.readFile(path, 'utf8', function (err, file) {
+    this.addDependency(rcpath);
+    fs.readFile(rcpath, 'utf8', function (err, file) {
       var options;
 
       if (!err) {
