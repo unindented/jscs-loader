@@ -1,4 +1,4 @@
-# JSCS loader for webpack [![Build Status](https://img.shields.io/travis/unindented/jscs-loader.svg)](http://travis-ci.org/unindented/jscs-loader) [![Dependency Status](https://img.shields.io/gemnasium/unindented/jscs-loader.svg)](https://gemnasium.com/unindented/jscs-loader)
+# JSCS loader for webpack [![Version](https://img.shields.io/npm/v/jscs-loader.svg)](https://www.npmjs.com/package/jscs-loader) [![Build Status](https://img.shields.io/travis/unindented/jscs-loader.svg)](http://travis-ci.org/unindented/jscs-loader) [![Dependency Status](https://img.shields.io/gemnasium/unindented/jscs-loader.svg)](https://gemnasium.com/unindented/jscs-loader)
 
 Runs your source through the [JSCS style checker](https://github.com/jscs-dev/node-jscs).
 
