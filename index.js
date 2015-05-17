@@ -3,7 +3,7 @@
 var fs       = require('fs');
 var strip    = require('strip-json-comments');
 var utils    = require('loader-utils');
-var RcLoader = require('rcloader');
+var RcFinder = require('rcfinder');
 var Checker  = require('jscs');
 
 var extend = function (obj) {
@@ -19,14 +19,14 @@ var extend = function (obj) {
   return obj;
 };
 
-var rcLoader = new RcLoader('.jscsrc', null, {
+var rcFinder = new RcFinder('.jscsrc', {
   loader: function (path) {
     return path;
   }
 });
 
 var loadConfigSync = function () {
-  var path = rcLoader.for(this.resourcePath);
+  var path = rcFinder.find(this.resourcePath);
   if (typeof path !== 'string') {
     // No .jscsrc found.
     return {};
@@ -38,7 +38,7 @@ var loadConfigSync = function () {
 };
 
 var loadConfigAsync = function (callback) {
-  rcLoader.for(this.resourcePath, function (err, path) {
+  rcFinder.find(this.resourcePath, function (err, path) {
     if (typeof path !== 'string') {
       // No .jscsrc found.
       return callback(null, {});
