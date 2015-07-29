@@ -30,11 +30,11 @@
   },
 
   "peerDependencies": {
-    "jscs": "^1.10"
+    "jscs": "^2.0.0"
   },
 
   "devDependencies": {
-    "jscs":     "^1.10",
+    "jscs":     "^2.0.0",
     "nodeunit": "^0.9"
   }
 }
