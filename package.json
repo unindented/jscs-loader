@@ -1,7 +1,7 @@
 {
   "name":        "jscs-loader",
   "description": "Run your source through the JSCS style checker.",
-  "version":     "0.1.0",
+  "version":     "0.2.0",
 
   "author": {
     "name":  "Daniel Perez Alvarez",
@@ -30,11 +30,11 @@
   },
 
   "peerDependencies": {
-    "jscs": "^2.0.0"
+    "jscs": "^2.0"
   },
 
   "devDependencies": {
-    "jscs":     "^2.0.0",
+    "jscs":     "^2.0",
     "nodeunit": "^0.9"
   }
 }
