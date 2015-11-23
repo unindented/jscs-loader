@@ -28,6 +28,6 @@
   },
   "devDependencies": {
     "jscs": "^2.0",
-    "nodeunit": "^0.9"
+    "nodeunit": "^0.9.1"
   }
 }
