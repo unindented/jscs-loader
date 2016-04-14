@@ -27,7 +27,7 @@
     "jscs": "^2.0"
   },
   "devDependencies": {
-    "jscs": "^2.0",
+    "jscs": "^3.0.0",
     "nodeunit": "^0.9.1"
   }
 }
