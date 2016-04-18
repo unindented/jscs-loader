@@ -24,7 +24,7 @@
     "strip-json-comments": "^2.0.0"
   },
   "peerDependencies": {
-    "jscs": "^2.0"
+    "jscs": "^3.0.3"
   },
   "devDependencies": {
     "jscs": "^3.0.3",

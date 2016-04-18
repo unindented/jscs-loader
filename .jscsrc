@@ -1,8 +1,6 @@
 {
   "excludeFiles": ["node_modules/**", "example/**"],
 
-  "esnext": true,
-
   "requireCurlyBraces": [
     "if",
     "else",
