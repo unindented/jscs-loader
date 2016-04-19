@@ -2,7 +2,7 @@ var loader = require('../index.js');
 var source = 'export let a = 1;\r\n';
 var error  = 'jscs results in errors\n' +
   '  validateLineBreaks @ line 1 char 17\n' +
-  '    Invalid line break';
+  '    validateLineBreaks: Invalid line break';
 
 var toString = Object.prototype.toString;
 
