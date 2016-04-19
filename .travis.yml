@@ -3,5 +3,13 @@ node_js:
   - '4'
   - '0.12'
 
+deploy:
+  provider: npm
+  email: unindented@gmail.com
+  api_key:
+    secure: afCx16X1h85SzqCBWId1dUJe0FwM3JSQPY/679vmTccqvCbYiFkMKT9Ytg5LPKJ6bc9q7qklvYj4hFzQV/ddzytwNCWNun4AWHWqauWW0CwhzVGQVsSY6+0Sfzzyxzg7xtGVqg/E50V7LvzAJz6+ZPuR8fDZ+PoxOOsbjT9CgqI=
+  on:
+    tags: true
+
 before_install:
   - npm install -g npm@latest
