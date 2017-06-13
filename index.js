@@ -71,7 +71,7 @@ var checkSource = function (source, config) {
   extend(config, options);
 
   // Copy query to own object.
-  var query = utils.parseQuery(this.query);
+  var query = utils.getOptions(this) || {};
   extend(config, query);
 
   // Move flags.
