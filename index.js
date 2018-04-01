@@ -67,7 +67,7 @@ var loadConfigAsync = function (callback) {
 
 var checkSource = function (source, config) {
   // Copy options to own object.
-  var options = this.options.jscs;
+  var options = this.query.jscs;
   extend(config, options);
 
   // Copy query to own object.
